@@ -1,0 +1,5 @@
+C:\Users\TEEMAH\source\repos\Employee Payroll System\Employee Payroll System\obj\Debug\net10.0\Employee Payroll System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TEEMAH\source\repos\Employee Payroll System\Employee Payroll System\obj\Debug\net10.0\Employee Payroll System.AssemblyInfoInputs.cache
+C:\Users\TEEMAH\source\repos\Employee Payroll System\Employee Payroll System\obj\Debug\net10.0\Employee Payroll System.AssemblyInfo.cs
+C:\Users\TEEMAH\source\repos\Employee Payroll System\Employee Payroll System\obj\Debug\net10.0\Employee Payroll System.csproj.CoreCompileInputs.cache
+C:\Users\TEEMAH\source\repos\Employee Payroll System\Employee Payroll System\obj\Debug\net10.0\Employee Payroll System.sourcelink.json
