@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
+using System.Collections.Generic;
     
 namespace PayrollSystem;
     public  class InvalidPerformanceScoreExecption : Exception
@@ -8,7 +9,12 @@ namespace PayrollSystem;
        public InvalidPerformanceScoreExecption() : base("Performance score must be between 0 and 10.") { }
        public InvalidPerformanceScoreExecption(string message) : base(message) { }
     }
-    public enum Department { }
+    public enum Department {
+    Operations,
+    Finance,
+    IT,
+    HR
+}
     public interface IBonusable
     {
     decimal CalculateBonus(int performanceScore);
@@ -83,4 +89,35 @@ public class Contractors : Employee
     }
 
     public override decimal CalculateMonthlyPay() => ContractAmount;
+}
+
+public enum Departments { IT, HR, Finance, Operations }
+
+public interface IBounces
+{
+    decimal CalculateBonus(double performanceScore);
+}
+
+public class InvalidPerformanceScoreException : Exception
+{
+    public InvalidPerformanceScoreException() : base("Score must be between 0 and 10.") { }
+    public InvalidPerformanceScoreException(string message) : base(message) { }
+}
+public struct PaySlip
+{
+    public Employee Employee;
+    public decimal GrossPay;
+    public DateTime PayDate;
+    public string PayPeriod;
+
+    public void PrintPaySlip()
+    {
+        Console.WriteLine("------------------------------------");
+        Console.WriteLine($"PAY SLIP - {PayPeriod}");
+        Console.WriteLine($"Date: {PayDate.ToShortDateString()}");
+        Console.WriteLine(Employee.GetEmployeeInfo());
+        Console.WriteLine($"Total Gross Pay: {GrossPay:C}");
+        Console.WriteLine("------------------------------------\n");
+    }
+
 }
